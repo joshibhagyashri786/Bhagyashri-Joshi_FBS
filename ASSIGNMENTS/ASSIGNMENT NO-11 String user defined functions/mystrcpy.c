@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void mystrcpy(char dest[], char src[]) 
+{
+    int i = 0;
+    while (src[i] != '\0') {
+        dest[i] = src[i];
+        i++;
+    }
+    dest[i] = '\0';
+}
+
+int main() {
+    char dest[100], src[100];
+
+    printf("Enter a string: ");
+    gets(src);
+
+    mystrcpy(dest, src);
+
+    printf("Copied string: %s", dest);
+
+    return 0;
+}
